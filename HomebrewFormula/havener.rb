@@ -1,9 +1,9 @@
 class Havener < Formula
   desc "Havener - Convenience tool to handle tasks around Containerized CF workloads on a Kubernetes cluster"
   homepage "https://github.com/homeport/havener"
-  url "https://github.com/homeport/havener/releases/download/v1.0.0/havener-darwin-amd64"
-  version "v1.0.0"
-  sha256 "26159503f484b282b5becd7ebcb59e39a91d0e5ad88a1d60f61188032cdab87f"
+  url "https://github.com/homeport/havener/releases/download/v1.1.0/havener-darwin-amd64"
+  version "v1.1.0"
+  sha256 "7d6266b890b369778b0cd3bdc7561a8f3fbc76a900bff764b6c8e20c830dc5ab"
 
   def install
     mv('havener-darwin-amd64', 'havener')
