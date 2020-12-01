@@ -1,9 +1,9 @@
 class BuildLoad < Formula
   desc "build-load - command line tool to create synthetic load for https://github.com/shipwright-io/build"
   homepage "https://github.com/homeport/build-load"
-  url "https://github.com/homeport/build-load/releases/download/v0.4.0/build-load-darwin-amd64"
-  version "v0.4.0"
-  sha256 "05c77fa567a72450155ea16d221d329b64a85944102e86028f69548c59d8f5f4"
+  url "https://github.com/homeport/build-load/releases/download/v0.4.1/build-load-darwin-amd64"
+  version "v0.4.1"
+  sha256 "09dfdfc7605d04f9d10be6f22698667644e9faff652f37f02279f5bf3d2d3f3f"
 
   def install
     mv('build-load-darwin-amd64', 'build-load')
