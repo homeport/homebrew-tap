@@ -1,9 +1,9 @@
 class Dyff < Formula
   desc "δyƒƒ /ˈdʏf/ - A diff tool for YAML files, and sometimes JSON"
   homepage "https://github.com/homeport/dyff"
-  url "https://github.com/homeport/dyff/releases/download/v1.1.3/dyff-darwin-amd64"
-  version "v1.1.3"
-  sha256 "5aae7370da6a62a10dc3efa10adc3094a201996f919eefe41d6e015696c00585"
+  url "https://github.com/homeport/dyff/releases/download/v1.1.4/dyff-darwin-amd64"
+  version "v1.1.4"
+  sha256 "c71a06c0da53b9ec641ffd6b3542965b280684d1795b2c1a92486de65e6f0c1d"
 
   def install
     mv('dyff-darwin-amd64', 'dyff')
