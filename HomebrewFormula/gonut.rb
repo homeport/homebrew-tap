@@ -5,13 +5,13 @@
 class Gonut < Formula
   desc "gonut - a portable tool to help you verify whether you can push a sample app to a Cloud Foundry"
   homepage "https://github.com/homeport/gonut"
-  version "2.0.4"
+  version "2.0.5"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/homeport/gonut/releases/download/v2.0.4/gonut_2.0.4_darwin_amd64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "c456e5c7cf76946df4c0b7c1ead4c8fe31bc2207c702d7e83f763034c962a8aa"
+      url "https://github.com/homeport/gonut/releases/download/v2.0.5/gonut_2.0.5_darwin_amd64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "98b0f4f07cc418df9fdb69a6f0fa3e5a5210f9351ca3a7109b7f2b207a85f496"
 
       def install
         bin.install "gonut"
@@ -21,8 +21,8 @@ class Gonut < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/homeport/gonut/releases/download/v2.0.4/gonut_2.0.4_linux_amd64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "12938c4c6039d3e4c8a19c88f4efa6bc88c5cb466f1df5729ff49930ab3bd604"
+      url "https://github.com/homeport/gonut/releases/download/v2.0.5/gonut_2.0.5_linux_amd64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "9a0028fdb1704d0a4f02b952f086fc13d4e5e996d304869a0136fe37ffbe492a"
 
       def install
         bin.install "gonut"
