@@ -5,21 +5,21 @@
 class BuildLoad < Formula
   desc "build-load - command line tool to create synthetic load for https://github.com/shipwright-io/build"
   homepage "https://github.com/homeport/build-load"
-  version "0.7.3"
+  version "0.7.4"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/homeport/build-load/releases/download/v0.7.3/build-load_0.7.3_darwin_arm64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "268295eaddc36cf588f9f92ef0dcb5fc117f07ed2692097916c75a1b7c84d6d3"
+    if Hardware::CPU.intel?
+      url "https://github.com/homeport/build-load/releases/download/v0.7.4/build-load_0.7.4_darwin_amd64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "e56bbc385afdcaf7493a1995b675b13b86e33027f92638170c3a5751ec01bee5"
 
       def install
         bin.install "build-load"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/homeport/build-load/releases/download/v0.7.3/build-load_0.7.3_darwin_amd64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "8e835818eba7d12239a8aa462e510baf6f87f0c98e8efdb491751b6b2a3021b0"
+    if Hardware::CPU.arm?
+      url "https://github.com/homeport/build-load/releases/download/v0.7.4/build-load_0.7.4_darwin_arm64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "851d8794e1b25b3841cf502a7f74f7825fc7b32c01f773e7f8a383a98e8bcb06"
 
       def install
         bin.install "build-load"
@@ -29,16 +29,16 @@ class BuildLoad < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/homeport/build-load/releases/download/v0.7.3/build-load_0.7.3_linux_arm64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "d05c0e6ab263a199c58938add384eea7882f39047d6803321e05fa7492234015"
+      url "https://github.com/homeport/build-load/releases/download/v0.7.4/build-load_0.7.4_linux_arm64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "66a871a486a1ec60e438bceeda0be6b7db636e8050f0d41a6184c5f87f9d866b"
 
       def install
         bin.install "build-load"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/homeport/build-load/releases/download/v0.7.3/build-load_0.7.3_linux_amd64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "d88780901a43c2d8d6aa9397d5f4e1c4bb8b35782a3b6d70067c8f5872d1d250"
+      url "https://github.com/homeport/build-load/releases/download/v0.7.4/build-load_0.7.4_linux_amd64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "3fe9983a3a599095c0db1e78ab763336a8f3fec5f50dcdc7280e3fecf2427693"
 
       def install
         bin.install "build-load"
