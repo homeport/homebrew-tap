@@ -5,21 +5,21 @@
 class BuildLoad < Formula
   desc "build-load - command line tool to create synthetic load for https://github.com/shipwright-io/build"
   homepage "https://github.com/homeport/build-load"
-  version "0.7.5"
+  version "0.8.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/homeport/build-load/releases/download/v0.7.5/build-load_0.7.5_darwin_arm64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "45fc57873758f5a09df512e33d19aa6605edcab97796a5e4d77673907bbaa09b"
+      url "https://github.com/homeport/build-load/releases/download/v0.8.0/build-load_0.8.0_darwin_arm64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "cff5d8f9a596bcf903bb378d250a660f2677c0e4ec2ea5927ca24472cbf5f56a"
 
       def install
         bin.install "build-load"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/homeport/build-load/releases/download/v0.7.5/build-load_0.7.5_darwin_amd64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "82008bedd9bee441438056cc0cb5dca91647621ca6112cc1d072cd9905a3360b"
+      url "https://github.com/homeport/build-load/releases/download/v0.8.0/build-load_0.8.0_darwin_amd64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "ef7af8bde20be698b9d0d3f7bebe1b4b7a1c12db9013d19ff0e27f27f3479e6a"
 
       def install
         bin.install "build-load"
@@ -29,16 +29,16 @@ class BuildLoad < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/homeport/build-load/releases/download/v0.7.5/build-load_0.7.5_linux_arm64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "b7544a5604e26e82fb052139072c260ecf60cb3a04c3c19193698fadf8c3d844"
+      url "https://github.com/homeport/build-load/releases/download/v0.8.0/build-load_0.8.0_linux_arm64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "a20a49245a4771813f60b626a101f34b7c2902e4769adab176f83489445d9475"
 
       def install
         bin.install "build-load"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/homeport/build-load/releases/download/v0.7.5/build-load_0.7.5_linux_amd64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "bdb5140e27feec296800e4af8d3083de272877c33b950b9ab3125e2c55cfd5f1"
+      url "https://github.com/homeport/build-load/releases/download/v0.8.0/build-load_0.8.0_linux_amd64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "edfddfd54d5d5f0736a7afeb736d975e93215662cf93400a120af9a8018dbb73"
 
       def install
         bin.install "build-load"
