@@ -5,21 +5,21 @@
 class Gonut < Formula
   desc "gonut - a portable tool to help you verify whether you can push a sample app to a Cloud Foundry"
   homepage "https://github.com/homeport/gonut"
-  version "2.0.6"
+  version "2.0.7"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/homeport/gonut/releases/download/v2.0.6/gonut_2.0.6_darwin_arm64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "89d5a65e9a88e93d836788232a0348a62d5a9dc748cb644a7e06ac306531291f"
+    if Hardware::CPU.intel?
+      url "https://github.com/homeport/gonut/releases/download/v2.0.7/gonut_2.0.7_darwin_amd64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "497209ca03863192eacd021c868fb61ac509e97cb10a4c13c8870152a615ac6e"
 
       def install
         bin.install "gonut"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/homeport/gonut/releases/download/v2.0.6/gonut_2.0.6_darwin_amd64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "a2c3f2b2e0ba7bbc4ba8c60bad431d2920f604607a713db8573de81679fcae2e"
+    if Hardware::CPU.arm?
+      url "https://github.com/homeport/gonut/releases/download/v2.0.7/gonut_2.0.7_darwin_arm64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "dd3d40b09f67246e3ac9e73c0f0695743bc03e96eb735e79c677ad8de73280a0"
 
       def install
         bin.install "gonut"
@@ -28,17 +28,17 @@ class Gonut < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/homeport/gonut/releases/download/v2.0.6/gonut_2.0.6_linux_amd64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "80f553f36cb4132f7c0152488049298a4b49f7c52530e39ded5c04ebfb059122"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/homeport/gonut/releases/download/v2.0.7/gonut_2.0.7_linux_arm64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "c4419bfc9f38b1ab5e06b4e1f697a9d4e86e182433a1fe6584fc52b0bd593d21"
 
       def install
         bin.install "gonut"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/homeport/gonut/releases/download/v2.0.6/gonut_2.0.6_linux_arm64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "c410b4beaf325223e364d9c2ab7031629d7060cf8b2aa01e1982b030c685c07c"
+    if Hardware::CPU.intel?
+      url "https://github.com/homeport/gonut/releases/download/v2.0.7/gonut_2.0.7_linux_amd64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "353d2ce08f701e9706e1a92d49d8cebb5c438e33638395d14eb1b1e02d3aa73b"
 
       def install
         bin.install "gonut"
