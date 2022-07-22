@@ -11,7 +11,7 @@ class Retry < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/homeport/retry/releases/download/v0.1.0/retry_0.1.0_darwin_arm64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "794379d3259af7c4d497086b5d65e131f963abd75012de13793403909bff79bd"
+      sha256 "f4af1e3b72e10f9896ae5990809f8a09bb2c5904af4d84ee2abe78c44640ac0a"
 
       def install
         bin.install "retry"
@@ -19,7 +19,7 @@ class Retry < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/homeport/retry/releases/download/v0.1.0/retry_0.1.0_darwin_amd64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "0f53432f7436819979a3e1cab2ef74e914f712669b7f59f067d425567b8dec71"
+      sha256 "9f61df27f925e4aedda9866275b6b26e069c365edd96860f81303329846d7d79"
 
       def install
         bin.install "retry"
@@ -30,7 +30,7 @@ class Retry < Formula
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/homeport/retry/releases/download/v0.1.0/retry_0.1.0_linux_arm64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "c800389c9fee224fa8299bb0e9a893d0f8d0c4375497e185348e7454caa3493a"
+      sha256 "338908b0bde340722bc1a9c209a48b47b75cc4847d7d5729a08a66f8a58e76e9"
 
       def install
         bin.install "retry"
@@ -38,7 +38,7 @@ class Retry < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/homeport/retry/releases/download/v0.1.0/retry_0.1.0_linux_amd64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "3f0d8b25789bd2c3e934ce078119d8995baae88488342c5d6501a2d3e99e1f77"
+      sha256 "0309fbdc92c517dd19d67ac0fea5b2b450ae0a5f4fada0e305be72a7406128b2"
 
       def install
         bin.install "retry"
