@@ -5,21 +5,21 @@
 class Termshot < Formula
   desc "Creates screenshots based on terminal command output."
   homepage "https://github.com/homeport/termshot"
-  version "0.2.5"
+  version "0.2.6-rc.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/homeport/termshot/releases/download/v0.2.5/termshot_0.2.5_darwin_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "93eb0590186316bc97ff8df186023cd878d46ce2e7bcc2648c25fda2325beda5"
+      url "https://github.com/homeport/termshot/releases/download/v0.2.6-rc.1/termshot_0.2.6-rc.1_darwin_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "9bcf26fca27fae5424f82544209c439ff785d15a88b34b039c45c3993e3596d6"
 
       def install
         bin.install "termshot"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/homeport/termshot/releases/download/v0.2.5/termshot_0.2.5_darwin_amd64.tar.gz", using: CurlDownloadStrategy
-      sha256 "c4a5bc0ac92750b9144c872000ceb7c7d42ac3c3ef8ddca03d2dcea892a9f2e6"
+      url "https://github.com/homeport/termshot/releases/download/v0.2.6-rc.1/termshot_0.2.6-rc.1_darwin_amd64.tar.gz", using: CurlDownloadStrategy
+      sha256 "e6a0a6dc1595eb36a56cf0ea1691b2542c279925f509c98f8b5fd849ce44a32c"
 
       def install
         bin.install "termshot"
@@ -28,17 +28,17 @@ class Termshot < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/homeport/termshot/releases/download/v0.2.5/termshot_0.2.5_linux_amd64.tar.gz", using: CurlDownloadStrategy
-      sha256 "68af5b41ec8a49ebbb963f87b4b2919658d268d7a59981d070c8a3cd555c9aa0"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/homeport/termshot/releases/download/v0.2.6-rc.1/termshot_0.2.6-rc.1_linux_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "7086b76d38512f3c7e6da782474503d1407c78187146545e5a54a7bfc25d3074"
 
       def install
         bin.install "termshot"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/homeport/termshot/releases/download/v0.2.5/termshot_0.2.5_linux_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "3237f8ba4c1de8d4f3eb63e137d525265a2651dc9bb413d4cfc8fcc71bba17f9"
+    if Hardware::CPU.intel?
+      url "https://github.com/homeport/termshot/releases/download/v0.2.6-rc.1/termshot_0.2.6-rc.1_linux_amd64.tar.gz", using: CurlDownloadStrategy
+      sha256 "dd2581a84801bb9a5497e61ee3df480ae574c1382fc3667840501bfa80a113f4"
 
       def install
         bin.install "termshot"
