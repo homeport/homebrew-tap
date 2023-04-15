@@ -5,21 +5,21 @@
 class Dyff < Formula
   desc "δyƒƒ /ˈdʏf/ - A diff tool for YAML files, and sometimes JSON"
   homepage "https://github.com/homeport/dyff"
-  version "1.5.6"
+  version "1.5.7"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/homeport/dyff/releases/download/v1.5.6/dyff_1.5.6_darwin_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "bc2bdba1891777686f5da5f571325108b5d532d098cbda1db439f8132d10c97b"
+    if Hardware::CPU.intel?
+      url "https://github.com/homeport/dyff/releases/download/v1.5.7/dyff_1.5.7_darwin_amd64.tar.gz", using: CurlDownloadStrategy
+      sha256 "8c616383ef5d8e8127ce9e620464f88a2195ff0906378864df69405baea1f2ad"
 
       def install
         bin.install "dyff"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/homeport/dyff/releases/download/v1.5.6/dyff_1.5.6_darwin_amd64.tar.gz", using: CurlDownloadStrategy
-      sha256 "0a58c5727aed588c0f19195ce002afc72e59f188936338f85deece35965dd47a"
+    if Hardware::CPU.arm?
+      url "https://github.com/homeport/dyff/releases/download/v1.5.7/dyff_1.5.7_darwin_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "2733faaaf132ada68d453ba040f061f5cb64210b72c686d8fc1505c867e626da"
 
       def install
         bin.install "dyff"
@@ -29,16 +29,16 @@ class Dyff < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/homeport/dyff/releases/download/v1.5.6/dyff_1.5.6_linux_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "35fa5a36c672638c4598e5c5902dfdc4f336c47d1d27c29888e892f23a8cc559"
+      url "https://github.com/homeport/dyff/releases/download/v1.5.7/dyff_1.5.7_linux_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "50973a8ba7ce31cd97ec872877f70889bde78918e5069bc38b9203a2f027da54"
 
       def install
         bin.install "dyff"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/homeport/dyff/releases/download/v1.5.6/dyff_1.5.6_linux_amd64.tar.gz", using: CurlDownloadStrategy
-      sha256 "a733665e7c622ead6b18e9cc7834788bea30ea64b66273bd2062475dcd19968a"
+      url "https://github.com/homeport/dyff/releases/download/v1.5.7/dyff_1.5.7_linux_amd64.tar.gz", using: CurlDownloadStrategy
+      sha256 "fe7903a9ed42debb200efcf7fb850134a8d0ba0bf3c2da6e10e374a0cf0c4a6c"
 
       def install
         bin.install "dyff"
