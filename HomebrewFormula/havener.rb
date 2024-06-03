@@ -5,21 +5,21 @@
 class Havener < Formula
   desc "/ˈheɪvənə/ - Think of it as a swiss army knife for Kubernetes tasks "
   homepage "https://github.com/homeport/havener"
-  version "2.2.0"
+  version "2.2.1"
   license "MIT"
 
   on_macos do
     on_intel do
-      url "https://github.com/homeport/havener/releases/download/v2.2.0/havener_2.2.0_darwin_amd64.tar.gz", using: CurlDownloadStrategy
-      sha256 "aa06e509a566d2536d49eb942e52d2144ae0dfa8c22ed306a09dbf9402d7a465"
+      url "https://github.com/homeport/havener/releases/download/v2.2.1/havener_2.2.1_darwin_amd64.tar.gz", using: CurlDownloadStrategy
+      sha256 "192605f79d9c2f1e43adec8cc2f82584b402b44056b44dc269339ba7e235c92a"
 
       def install
         bin.install "havener"
       end
     end
     on_arm do
-      url "https://github.com/homeport/havener/releases/download/v2.2.0/havener_2.2.0_darwin_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "16f8440f63a64db3cdb5fc148b7fb64095a6daba5db69d5a26df07a07fe390ec"
+      url "https://github.com/homeport/havener/releases/download/v2.2.1/havener_2.2.1_darwin_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "9c8500ef9272e6084210e1a29577372d7c4283172afeba745c29158dcebaf744"
 
       def install
         bin.install "havener"
@@ -30,8 +30,8 @@ class Havener < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/homeport/havener/releases/download/v2.2.0/havener_2.2.0_linux_amd64.tar.gz", using: CurlDownloadStrategy
-        sha256 "2ffe5c03800e73eb3bcf9afb1ea11d5f7bef9207e54ad9c88492c4560656e642"
+        url "https://github.com/homeport/havener/releases/download/v2.2.1/havener_2.2.1_linux_amd64.tar.gz", using: CurlDownloadStrategy
+        sha256 "ebc1a2897751650ff77c4b7188242dee35dfa695b974fc4bb8329f5afe0c2fef"
 
         def install
           bin.install "havener"
@@ -40,8 +40,8 @@ class Havener < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/homeport/havener/releases/download/v2.2.0/havener_2.2.0_linux_arm64.tar.gz", using: CurlDownloadStrategy
-        sha256 "019858c7beae5fae6faaf3407b54db4aab16d81949f8f03c2028ae48d710d0b9"
+        url "https://github.com/homeport/havener/releases/download/v2.2.1/havener_2.2.1_linux_arm64.tar.gz", using: CurlDownloadStrategy
+        sha256 "5e2d8f82b516f1e1c1d8e0fa540d90a69d4eedbb782983eade106707219aa435"
 
         def install
           bin.install "havener"
