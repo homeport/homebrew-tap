@@ -5,21 +5,21 @@
 class Retry < Formula
   desc "Tool to retry a command in case it fails"
   homepage "https://github.com/homeport/retry"
-  version "0.1.4"
+  version "0.1.5"
   license "MIT"
 
   on_macos do
     on_intel do
-      url "https://github.com/homeport/retry/releases/download/v0.1.4/retry_0.1.4_darwin_amd64.tar.gz", using: CurlDownloadStrategy
-      sha256 "ef18db8ad0dcac4f39cae213958d4c3c3115585836f5b844d2d0143aebe94568"
+      url "https://github.com/homeport/retry/releases/download/v0.1.5/retry_0.1.5_darwin_amd64.tar.gz", using: CurlDownloadStrategy
+      sha256 "d9010e980c33e72a4cdf1c223ea548a7f8de2048520c86484f17cbdbf2f0dc75"
 
       def install
         bin.install "retry"
       end
     end
     on_arm do
-      url "https://github.com/homeport/retry/releases/download/v0.1.4/retry_0.1.4_darwin_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "9790e037b363b06932fcfa6bc58af7fea7c06d03f7c5ef52d08b5f9dada87644"
+      url "https://github.com/homeport/retry/releases/download/v0.1.5/retry_0.1.5_darwin_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "0a91221383c9b3524e9e8c7fba74487c10e06b9e248462978dc71b32b69ea013"
 
       def install
         bin.install "retry"
@@ -30,8 +30,8 @@ class Retry < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/homeport/retry/releases/download/v0.1.4/retry_0.1.4_linux_amd64.tar.gz", using: CurlDownloadStrategy
-        sha256 "c397c87dbdcee370eb45f6503d99beb5672da271c34a1b0ddb7264f5ea314b01"
+        url "https://github.com/homeport/retry/releases/download/v0.1.5/retry_0.1.5_linux_amd64.tar.gz", using: CurlDownloadStrategy
+        sha256 "1ff3adb63be0acf591c7a0258640f720de3ccb069f2a5f62765a7af6b8765207"
 
         def install
           bin.install "retry"
@@ -40,8 +40,8 @@ class Retry < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/homeport/retry/releases/download/v0.1.4/retry_0.1.4_linux_arm64.tar.gz", using: CurlDownloadStrategy
-        sha256 "49d3086ac8e8f8a16d959cc6d0da395cbd313b191ace1a90790bc15b40de106f"
+        url "https://github.com/homeport/retry/releases/download/v0.1.5/retry_0.1.5_linux_arm64.tar.gz", using: CurlDownloadStrategy
+        sha256 "395bec69922c5ce161dc384bdb77e683b7e3deb0da97628ca3029dac749ef4de"
 
         def install
           bin.install "retry"
