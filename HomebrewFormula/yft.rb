@@ -5,21 +5,21 @@
 class Yft < Formula
   desc "yft - YAML file tool"
   homepage "https://github.com/homeport/dyff"
-  version "1.0.7"
+  version "1.0.8"
   license "MIT"
 
   on_macos do
     on_intel do
-      url "https://github.com/homeport/yft/releases/download/v1.0.7/yft_1.0.7_darwin_amd64.tar.gz", using: CurlDownloadStrategy
-      sha256 "01a08b0412fe9d502050f8aa7f9ce35ab90660eaf1b51818e43005cda6162b0b"
+      url "https://github.com/homeport/yft/releases/download/v1.0.8/yft_1.0.8_darwin_amd64.tar.gz", using: CurlDownloadStrategy
+      sha256 "22bb9a68ecd8daa8215d482dcf480160967688cca174e38fa64d42ddcd688d5e"
 
       def install
         bin.install "yft"
       end
     end
     on_arm do
-      url "https://github.com/homeport/yft/releases/download/v1.0.7/yft_1.0.7_darwin_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "5ff2258b9fc8c738ab58c1841cc7b3dc3c8515ff79dc791d42f09359d1bd6ad6"
+      url "https://github.com/homeport/yft/releases/download/v1.0.8/yft_1.0.8_darwin_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "83a49d1a28bfa9259086de1bc43530e6ffef8a15d110f37134c02c0af39bef3c"
 
       def install
         bin.install "yft"
@@ -30,8 +30,8 @@ class Yft < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/homeport/yft/releases/download/v1.0.7/yft_1.0.7_linux_amd64.tar.gz", using: CurlDownloadStrategy
-        sha256 "e83930f8903837fbb48ed28fda6ec034362284fadbbd03645a4e3cd24223926e"
+        url "https://github.com/homeport/yft/releases/download/v1.0.8/yft_1.0.8_linux_amd64.tar.gz", using: CurlDownloadStrategy
+        sha256 "b71f27a351c2ed85a29b8cafcf393b50ea3321d282632f7e798c8f4e7e1aef7e"
 
         def install
           bin.install "yft"
@@ -40,8 +40,8 @@ class Yft < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/homeport/yft/releases/download/v1.0.7/yft_1.0.7_linux_arm64.tar.gz", using: CurlDownloadStrategy
-        sha256 "27d2c8b8ff7a8838ae8ad1d155b645a84d1092d16333d3260d3141936fd15c23"
+        url "https://github.com/homeport/yft/releases/download/v1.0.8/yft_1.0.8_linux_arm64.tar.gz", using: CurlDownloadStrategy
+        sha256 "44c63ba6dfa7206791faadb9240a191f41fa169439b373983c4ae63999a09f85"
 
         def install
           bin.install "yft"
