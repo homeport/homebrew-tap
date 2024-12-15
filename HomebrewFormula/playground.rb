@@ -2,21 +2,21 @@
 class Playground < Formula
   desc "Playground project."
   homepage "https://github.com/homeport/playground"
-  version "0.0.6"
+  version "0.0.7"
   license "MIT"
 
   on_macos do
     on_intel do
-      url "https://github.com/homeport/playground/releases/download/v0.0.6/playground_0.0.6_darwin_amd64.tar.gz", using: CurlDownloadStrategy
-      sha256 "f91984ae050f45bef527950f1f451712b044904a1160462b634a5b4e0fce2ca0"
+      url "https://github.com/homeport/playground/releases/download/v0.0.7/playground_0.0.7_darwin_amd64.tar.gz", using: CurlDownloadStrategy
+      sha256 "681570f242faffa3e5054e1d161b58fdb2b702c2b07539655fe5ef40ccea7ef8"
 
       def install
         bin.install "playground"
       end
     end
     on_arm do
-      url "https://github.com/homeport/playground/releases/download/v0.0.6/playground_0.0.6_darwin_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "297d4c1cf464c096344c09925c6ec185c275dd3c6f183d63401c6084a4d9b30e"
+      url "https://github.com/homeport/playground/releases/download/v0.0.7/playground_0.0.7_darwin_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "242fd72ba0948bd1bf309204a11e9e297724af303e9e402a46e6d57a7a81b77c"
 
       def install
         bin.install "playground"
@@ -27,8 +27,8 @@ class Playground < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/homeport/playground/releases/download/v0.0.6/playground_0.0.6_linux_amd64.tar.gz", using: CurlDownloadStrategy
-        sha256 "9a0b3d6f7d8967eb06aa5f1c63be340b3785f774c4fb1fe99898c69bb1129c96"
+        url "https://github.com/homeport/playground/releases/download/v0.0.7/playground_0.0.7_linux_amd64.tar.gz", using: CurlDownloadStrategy
+        sha256 "7713055d2d69682e1ecb43cd9b64f5efbe897766b0a01c640d1c81ff22c173c1"
 
         def install
           bin.install "playground"
