@@ -5,21 +5,21 @@
 class Forklift < Formula
   desc "Container Image manipulation tool"
   homepage "https://github.com/homeport/forklift"
-  version "0.0.2"
+  version "0.1.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/homeport/forklift/releases/download/v0.0.2/forklift_0.0.2_darwin_amd64.tar.gz", using: CurlDownloadStrategy
-      sha256 "4d8a74d56978b7fefe44e9958aa9c7bc2616e5f2c0fe5ebec888d093e5831625"
+      url "https://github.com/homeport/forklift/releases/download/v0.1.0/forklift_0.1.0_darwin_amd64.tar.gz", using: CurlDownloadStrategy
+      sha256 "79a75c9a30cfeb5b762cbe93af92ede9f107cd893331847e6de740de7ad187ec"
 
       def install
         bin.install "forklift"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/homeport/forklift/releases/download/v0.0.2/forklift_0.0.2_darwin_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "d7ed33c0d1b6f777da82e154ff8bcd7b79afeb5e13f11617181fc24c85947e9e"
+      url "https://github.com/homeport/forklift/releases/download/v0.1.0/forklift_0.1.0_darwin_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "7364cb2aeb670b15b286a68e58ea101f7d217d94e49d69556deb64c1f7c8fdee"
 
       def install
         bin.install "forklift"
@@ -28,24 +28,18 @@ class Forklift < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/homeport/forklift/releases/download/v0.0.2/forklift_0.0.2_linux_amd64.tar.gz", using: CurlDownloadStrategy
-        sha256 "e73fede0199d803cc0c8201bd2819705513e02cfb12616970fd6852ca3d51f48"
-
-        def install
-          bin.install "forklift"
-        end
+    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
+      url "https://github.com/homeport/forklift/releases/download/v0.1.0/forklift_0.1.0_linux_amd64.tar.gz", using: CurlDownloadStrategy
+      sha256 "8d43e55a6665fb70683ae4896b296b96c0865c0ed5346c8d7249f1fdb5d6dafa"
+      def install
+        bin.install "forklift"
       end
     end
-    if Hardware::CPU.arm?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/homeport/forklift/releases/download/v0.0.2/forklift_0.0.2_linux_arm64.tar.gz", using: CurlDownloadStrategy
-        sha256 "89c5fa2ec740f62c5f914ac424f1cc2a1a909b322bc9292e9965a06d6e4144dc"
-
-        def install
-          bin.install "forklift"
-        end
+    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
+      url "https://github.com/homeport/forklift/releases/download/v0.1.0/forklift_0.1.0_linux_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "0e2c8b73eda6da2b795e7c3b127c9f580bbdc8de88816f0da1bbf187611628d7"
+      def install
+        bin.install "forklift"
       end
     end
   end
