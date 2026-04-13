@@ -5,40 +5,40 @@
 class GoCacheProg < Formula
   desc "Experimental Go Cache program implementation using IBM Cloud Object Storage (COS) as cache backend"
   homepage "https://github.com/homeport/go-cache-prog"
-  version "0.0.2"
+  version "0.0.3"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/homeport/go-cache-prog/releases/download/v0.0.2/go-cache-prog_0.0.2_darwin_amd64.tar.gz", using: CurlDownloadStrategy
-      sha256 "c6e968053edf3cf36ea2151d9e7a48a5f7fa008b8c0eaae03a07cb5ec2ff6e61"
+      url "https://github.com/homeport/go-cache-prog/releases/download/v0.0.3/go-cache-prog_0.0.3_darwin_amd64.tar.gz", using: CurlDownloadStrategy
+      sha256 "6a1248011dd875ed19a3b3d35729456104a2b46f23f7dd652c1d0d217462bcf8"
 
-      def install
+      define_method(:install) do
         bin.install "go-cache-prog"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/homeport/go-cache-prog/releases/download/v0.0.2/go-cache-prog_0.0.2_darwin_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "c9c10264a986ca3204168bb1c08eb7ce8108ebd1cfc09136ad70075f9ebb0571"
+      url "https://github.com/homeport/go-cache-prog/releases/download/v0.0.3/go-cache-prog_0.0.3_darwin_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "053fed26507e8f958762a94efc1bf384a32572a9ced0c490ebcc69fc80f04d88"
 
-      def install
+      define_method(:install) do
         bin.install "go-cache-prog"
       end
     end
   end
 
   on_linux do
-    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/homeport/go-cache-prog/releases/download/v0.0.2/go-cache-prog_0.0.2_linux_amd64.tar.gz", using: CurlDownloadStrategy
-      sha256 "88cf46a8dc98975f131cdd605ca4e51adf07a44d00c24d7d23ed22c2e765bf1f"
-      def install
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/homeport/go-cache-prog/releases/download/v0.0.3/go-cache-prog_0.0.3_linux_amd64.tar.gz", using: CurlDownloadStrategy
+      sha256 "8d52a2bc7bc763c8d733a0d409083f47ef6a65836be75d00d694f3041c04a3dc"
+      define_method(:install) do
         bin.install "go-cache-prog"
       end
     end
-    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/homeport/go-cache-prog/releases/download/v0.0.2/go-cache-prog_0.0.2_linux_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "434819c0d69b4431d8cc40aa97ddf986ecd8b8e665ddd15a9bf1703179997b70"
-      def install
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/homeport/go-cache-prog/releases/download/v0.0.3/go-cache-prog_0.0.3_linux_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "bedc6e199fe00fd2f73ea30e049f83e68d4a1797c8f7c869ff97bbd56158d2aa"
+      define_method(:install) do
         bin.install "go-cache-prog"
       end
     end
