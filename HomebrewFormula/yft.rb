@@ -5,47 +5,41 @@
 class Yft < Formula
   desc "yft - YAML file tool"
   homepage "https://github.com/homeport/dyff"
-  version "1.0.11"
+  version "1.0.12"
   license "MIT"
 
   on_macos do
-    on_intel do
-      url "https://github.com/homeport/yft/releases/download/v1.0.11/yft_1.0.11_darwin_amd64.tar.gz", using: CurlDownloadStrategy
-      sha256 "761ee36e95a774377693c0d4488423abe2059cbba206736f37663e565ff53c86"
+    if Hardware::CPU.intel?
+      url "https://github.com/homeport/yft/releases/download/v1.0.12/yft_1.0.12_darwin_amd64.tar.gz", using: CurlDownloadStrategy
+      sha256 "36b868a19933becd439b41722ea7368a103437d037c7a61d5746f77bd3df58c4"
 
-      def install
+      define_method(:install) do
         bin.install "yft"
       end
     end
-    on_arm do
-      url "https://github.com/homeport/yft/releases/download/v1.0.11/yft_1.0.11_darwin_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "74b2c926b983b0726d218b586d9bdb79744c8e99d001b24b1c2af90d46556d6e"
+    if Hardware::CPU.arm?
+      url "https://github.com/homeport/yft/releases/download/v1.0.12/yft_1.0.12_darwin_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "cabb9986beb29f4279181ee93307356b6cfb1d4e5a4a7d64388ae251bf413ae9"
 
-      def install
+      define_method(:install) do
         bin.install "yft"
       end
     end
   end
 
   on_linux do
-    on_intel do
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/homeport/yft/releases/download/v1.0.11/yft_1.0.11_linux_amd64.tar.gz", using: CurlDownloadStrategy
-        sha256 "5e52836f3cb6f6287cc021c585677b1c8450a36df1706edd0128fe13d169e143"
-
-        def install
-          bin.install "yft"
-        end
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/homeport/yft/releases/download/v1.0.12/yft_1.0.12_linux_amd64.tar.gz", using: CurlDownloadStrategy
+      sha256 "9d2fee2576f1944abc8074ca9aa808f6cdcb1cdb696059a4add6131cd9dab268"
+      define_method(:install) do
+        bin.install "yft"
       end
     end
-    on_arm do
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/homeport/yft/releases/download/v1.0.11/yft_1.0.11_linux_arm64.tar.gz", using: CurlDownloadStrategy
-        sha256 "7a1aa2c323b56b7c312aa152521347014d275d204de3eb2da2f220004e002c3c"
-
-        def install
-          bin.install "yft"
-        end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/homeport/yft/releases/download/v1.0.12/yft_1.0.12_linux_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "e9d65282e763bcb283746dda3232617f6d76832955a2654803e572fb838d6edf"
+      define_method(:install) do
+        bin.install "yft"
       end
     end
   end
